@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1",
+    "date": "2025-11-26",
+    "image": "/images/placeholder-1.jpg"
+  },
+  {
+    "id": "2",
+    "date": "2025-11-25",
+    "title": "Building in public",
+    "description": "Started rebuilding my personal site. Keeping it simple, focusing on design first.",
+    "image": "/images/placeholder-2.jpg"
+  },
+  {
+    "id": "3",
+    "date": "2025-11-24",
+    "image": "/images/placeholder-3.jpg"
+  },
+  {
+    "id": "4",
+    "date": "2025-11-23",
+    "image": "/images/placeholder-4.jpg"
+  },
+  {
+    "id": "5",
+    "date": "2025-11-22",
+    "title": "On music and creativity",
+    "description": "Sci-fi soundtracks fuel my work",
+    "image": "/images/placeholder-5.jpg"
+  },
+  {
+    "id": "6",
+    "date": "2025-11-21",
+    "image": "/images/placeholder-6.jpg"
+  }
+]
