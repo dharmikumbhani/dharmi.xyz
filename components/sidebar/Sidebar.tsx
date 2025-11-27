@@ -14,9 +14,11 @@ export function Sidebar() {
       <div>
         {/* Profile Photo */}
         <div className="mb-2 lg:mb-3">
-          <div className="w-12 h-12 lg:w-14 lg:h-14 bg-border flex items-center justify-center text-text-muted text-xs flex-shrink-0 rounded-lg lg:rounded-[10px] mb-2 lg:mb-2.5">
-            Photo
-          </div>
+          <img
+            src="/images/dharmi-studio-ghibli.png"
+            alt="Dharmi Kumbhani"
+            className="w-12 h-12 lg:w-14 lg:h-14 rounded-lg lg:rounded-[10px] mb-2 lg:mb-2.5 object-cover"
+          />
           <h1 className="text-lg lg:text-xl font-bold leading-tight tracking-tight">
             Dharmi Kumbhani
           </h1>
@@ -26,18 +28,19 @@ export function Sidebar() {
         <div className="text-text-muted leading-relaxed text-xs lg:text-sm space-y-2 lg:space-y-2.5 mb-6 lg:mb-10">
           <p>
             Big music and sci-fi fan. I spend my time building things at the intersection of{' '}
-            <a href="https://github.com/dharmik" target="_blank" rel="noopener noreferrer" className="text-text hover:underline">
+            <a href="https://github.com/dharmikumbhani" target="_blank" rel="noopener noreferrer" className="text-text hover:underline">
               design and technology
             </a>.
           </p>
           <p>
-            Currently exploring{' '}
-            <a href="#" className="text-text hover:underline">
-              decentralized systems
-            </a>,{' '}
-            <a href="#" className="text-text hover:underline">
-              creative tools
-            </a>, and how to make the internet feel more human again.
+            Currently working on{' '}
+            <a href="https://beampay.io" target="_blank" rel="noopener noreferrer" className="text-text hover:underline">
+              BeamPay
+            </a>{' '}
+            to solve for global stablecoin payments, and building onchain reputation scoring with{' '}
+            <a href="https://openrank.com" target="_blank" rel="noopener noreferrer" className="text-text hover:underline">
+              Openrank
+            </a>.
           </p>
         </div>
 
@@ -53,16 +56,16 @@ export function Sidebar() {
           <SpotifyIcon />
           Spotify
         </a>
-        <a href="https://twitter.com/dharmik" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
+        <a href="https://x.com/dharmikumbhani" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
           Twitter
         </a>
-        <a href="https://github.com/dharmik" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
+        <a href="https://github.com/dharmikumbhani" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
           GitHub
         </a>
-        <a href="https://are.na/dharmik" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
+        <a href="https://www.are.na/dharmi-kumbhani/channels" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
           Are.na
         </a>
-        <a href="mailto:hello@dharmi.xyz" className="hover:text-text transition-colors">
+        <a href="mailto:dharmikumbhani201@gmail.com" className="hover:text-text transition-colors">
           Email
         </a>
       </div>
