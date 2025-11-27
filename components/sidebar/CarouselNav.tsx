@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react'
 import { getFeedNavItems } from '@/lib/feed'
 
 const CONFIG = {
-  rotationPerItem: 12,      // degrees - reduced for tighter spacing
-  cylinderRadius: 130,      // px - increased for bigger carousel
+  rotationPerItem: 10,      // degrees - cleaner 10° increments
+  cylinderRadius: 140,      // px - more breathing room
 } as const
 
 export function CarouselNav() {
   const [activeIndex, setActiveIndex] = useState(0)
   const navItems = getFeedNavItems()
+  const totalItems = navItems.length
 
   // Sync carousel with page scroll - immediate updates with RAF
   useEffect(() => {
@@ -54,96 +55,165 @@ export function CarouselNav() {
     }
   }, [navItems])
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        const nextIndex = Math.min(activeIndex + 1, totalItems - 1)
+        handleClick(nextIndex)
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        const prevIndex = Math.max(activeIndex - 1, 0)
+        handleClick(prevIndex)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [activeIndex, totalItems])
+
   const handleClick = (index: number) => {
     const element = document.getElementById(`item-${navItems[index].id}`)
     element?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
+  const handleRandom = () => {
+    const randomIndex = Math.floor(Math.random() * totalItems)
+    handleClick(randomIndex)
+  }
+
   const rotation = activeIndex * CONFIG.rotationPerItem
 
   return (
-    <div
-      className="relative overflow-visible"
-      style={{
-        height: 'var(--carousel-height)',
-        perspective: '1000px',
-        perspectiveOrigin: 'center center',
-      }}
-    >
-      {/* Carousel cylinder */}
-      <div
-        className="absolute inset-0"
-        style={{
-          transformStyle: 'preserve-3d',
-          transform: `rotateX(${rotation}deg)`,
-          transition: 'transform 0.15s ease-out',
-        }}
-      >
-        {navItems.map((item, index) => {
-          const offsetFromActive = Math.abs(index - activeIndex)
-          const isActive = index === activeIndex
-
-          // Scale: active item is bigger
-          const scale = isActive ? 1.1 : 1 - (offsetFromActive * 0.08)
-          const opacity = isActive ? 1 : Math.max(0.15, 1 - offsetFromActive * 0.35)
-
-          return (
-            <button
-              key={item.id}
-              onClick={() => handleClick(index)}
-              className="absolute left-0 px-3 py-2 text-xs rounded-md"
-              style={{
-                transform: `
-                  rotateX(${-index * CONFIG.rotationPerItem}deg)
-                  translateZ(${CONFIG.cylinderRadius}px)
-                  scale(${scale})
-                `,
-                opacity,
-                top: '50%',
-                marginTop: -20,
-                backfaceVisibility: 'hidden',
-                pointerEvents: offsetFromActive <= 2 ? 'auto' : 'none',
-                transition: 'transform 0.15s ease-out, opacity 0.15s ease-out',
-                willChange: 'transform, opacity',
-              }}
+    <div className="space-y-2">
+      {/* Header with title, shuffle button, and counter */}
+      <div className="flex items-center justify-between px-1">
+        <div className="flex items-center gap-2.5">
+          <span
+            className="text-[11px] tracking-wide font-semibold uppercase"
+            style={{
+              color: 'var(--color-text-muted)',
+              letterSpacing: '0.06em',
+            }}
+          >
+            Highlights
+          </span>
+          <button
+            onClick={handleRandom}
+            className="transition-all duration-200 ease-out hover:rotate-12 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+            aria-label={`Random item. Currently showing ${navItems[activeIndex]?.label}`}
+            style={{ color: 'var(--color-text-muted)' }}
+          >
+            <svg
+              className="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
             >
-              <span
-                className={item.type === 'title' ? 'font-medium' : 'font-normal'}
-                style={{
-                  color: isActive ? 'var(--color-text)' : 'var(--color-text-muted)',
-                  fontWeight: isActive ? 600 : item.type === 'title' ? 500 : 400,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                  transition: 'color 0.15s ease-out',
-                }}
-              >
-                {item.label}
-              </span>
-            </button>
-          )
-        })}
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="8.5" cy="8.5" r="1" fill="currentColor"/>
+              <circle cx="15.5" cy="8.5" r="1" fill="currentColor"/>
+              <circle cx="12" cy="12" r="1" fill="currentColor"/>
+              <circle cx="8.5" cy="15.5" r="1" fill="currentColor"/>
+              <circle cx="15.5" cy="15.5" r="1" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <span
+          className="text-[11px] tabular-nums"
+          style={{
+            color: 'var(--color-text-muted)',
+            letterSpacing: '0.02em',
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
+          {activeIndex + 1} / {totalItems}
+        </span>
       </div>
 
-      {/* Center indicator line */}
+      {/* Carousel */}
       <div
-        className="absolute left-0 right-0 top-1/2 h-12 pointer-events-none"
+        className="relative overflow-visible"
         style={{
-          transform: 'translateY(-50%)',
-          background: 'linear-gradient(to right, transparent, var(--color-border), transparent)',
-          opacity: 0.15,
+          height: 'var(--carousel-height)',
+          perspective: '1200px',
+          perspectiveOrigin: 'center center',
         }}
-      />
+      >
+        {/* Carousel cylinder */}
+        <div
+          className="absolute inset-0"
+          style={{
+            transformStyle: 'preserve-3d',
+            transform: `rotateX(${rotation}deg)`,
+            transition: 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          }}
+        >
+          {navItems.map((item, index) => {
+            const offsetFromActive = Math.abs(index - activeIndex)
+            const isActive = index === activeIndex
 
-      {/* Minimal center dot */}
-      <div
-        className="absolute left-0 top-1/2 w-[3px] h-[3px] rounded-full pointer-events-none"
-        style={{
-          backgroundColor: 'var(--color-text)',
-          transform: 'translateY(-1.5px)',
-          boxShadow: '0 0 8px rgba(0, 0, 0, 0.1)',
-        }}
-      />
+            // Refined scaling: subtle 1.08x for active
+            const scale = isActive ? 1.08 : Math.max(0.92, 1 - (offsetFromActive * 0.05))
+            // Gentler opacity fade
+            const opacity = isActive ? 1 : Math.max(0.25, 1 - offsetFromActive * 0.25)
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleClick(index)}
+                className="absolute left-1 px-3 py-2 text-xs rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+                style={{
+                  transform: `
+                    rotateX(${-index * CONFIG.rotationPerItem}deg)
+                    translateZ(${CONFIG.cylinderRadius}px)
+                    scale(${scale})
+                  `,
+                  opacity,
+                  top: '50%',
+                  marginTop: -20,
+                  backfaceVisibility: 'hidden',
+                  pointerEvents: offsetFromActive <= 2 ? 'auto' : 'none',
+                  transition: 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease-out',
+                  willChange: 'transform, opacity',
+                  transformOrigin: 'left center',
+                }}
+                aria-label={`${item.label}${isActive ? ', active' : ''}`}
+                aria-current={isActive ? 'true' : undefined}
+              >
+                <span
+                  className={item.type === 'title' ? 'font-medium' : 'font-normal'}
+                  style={{
+                    color: isActive ? 'var(--color-accent)' : 'var(--color-text-muted)',
+                    fontWeight: isActive ? 600 : item.type === 'title' ? 500 : 400,
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    transition: 'color 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                    WebkitFontSmoothing: 'antialiased',
+                    MozOsxFontSmoothing: 'grayscale',
+                  }}
+                >
+                  {item.label}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Center indicator line - ultra subtle */}
+        <div
+          className="absolute left-0 right-0 top-1/2 h-16 pointer-events-none"
+          style={{
+            transform: 'translateY(-50%)',
+            background: 'linear-gradient(to right, transparent 0%, var(--color-border) 50%, transparent 100%)',
+            opacity: 0.12,
+            mixBlendMode: 'overlay',
+          }}
+        />
+      </div>
     </div>
   )
 }

@@ -12,21 +12,34 @@ export function Sidebar() {
   return (
     <aside className="w-full lg:w-[var(--sidebar-width)] lg:fixed lg:left-0 lg:top-0 lg:h-screen px-4 lg:px-8 py-5 lg:py-10 flex flex-col lg:justify-between">
       <div>
-        {/* Profile Photo + Name */}
-        <div className="flex items-center gap-3 lg:gap-4 mb-4 lg:mb-6">
-          <div className="w-10 h-10 lg:w-12 lg:h-12 bg-border flex items-center justify-center text-text-muted text-xs flex-shrink-0 rounded-lg lg:rounded-[10px]">
+        {/* Profile Photo */}
+        <div className="mb-2 lg:mb-3">
+          <div className="w-12 h-12 lg:w-14 lg:h-14 bg-border flex items-center justify-center text-text-muted text-xs flex-shrink-0 rounded-lg lg:rounded-[10px] mb-2 lg:mb-2.5">
             Photo
           </div>
-          <h1 className="text-2xl font-bold leading-none tracking-tight">
+          <h1 className="text-lg lg:text-xl font-bold leading-tight tracking-tight">
             Dharmi Kumbhani
           </h1>
         </div>
 
-        {/* Bio */}
-        <p className="text-text-muted leading-relaxed text-sm mb-4 lg:mb-8">
-          Big music and sci-fi fan. I spend my time building things at the intersection of design and technology.
-          <span className="hidden lg:inline"> Currently exploring decentralized systems, creative tools, and how to make the internet feel more human again.</span>
-        </p>
+        {/* Bio - 2 paragraphs with hyperlinks */}
+        <div className="text-text-muted leading-relaxed text-xs lg:text-sm space-y-2 lg:space-y-2.5 mb-6 lg:mb-10">
+          <p>
+            Big music and sci-fi fan. I spend my time building things at the intersection of{' '}
+            <a href="https://github.com/dharmik" target="_blank" rel="noopener noreferrer" className="text-text hover:underline">
+              design and technology
+            </a>.
+          </p>
+          <p>
+            Currently exploring{' '}
+            <a href="#" className="text-text hover:underline">
+              decentralized systems
+            </a>,{' '}
+            <a href="#" className="text-text hover:underline">
+              creative tools
+            </a>, and how to make the internet feel more human again.
+          </p>
+        </div>
 
         {/* Carousel Navigation - Desktop only */}
         <div className="hidden lg:block">
@@ -35,7 +48,7 @@ export function Sidebar() {
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-4 text-sm lg:text-[11px] text-text-muted flex-wrap lg:flex-nowrap mt-4 lg:mt-0">
+      <div className="flex gap-4 text-[11px] text-text-muted flex-wrap lg:flex-nowrap mt-4 lg:mt-0">
         <a href="https://open.spotify.com/user/dharmik" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors flex items-center gap-1">
           <SpotifyIcon />
           Spotify
