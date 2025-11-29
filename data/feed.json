@@ -11,8 +11,9 @@
     "id": "2",
     "date": "2025-11-27",
     "title": "Beam Pay Candy Shop",
-    "description": "Placeholder description for Beam Pay Candy Shop",
-    "image": "/images/projects/beampay-candy-shop.mp4"
+    "description": "Beam Pay's first live public initiative at Devconnect Argentina 2025.",
+    "image": "/images/projects/beampay-candy-shop.mp4",
+    "link": "https://beampay.io/candy"
   },
   {
     "id": "3",
