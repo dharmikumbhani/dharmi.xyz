@@ -1,37 +1,319 @@
 [
   {
     "id": "1",
-    "date": "2025-11-26",
-    "image": "/images/placeholder-1.jpg"
+    "date": "2025-11-27",
+    "title": "Beam Pay",
+    "description": "Building global stablecoin payment infrastructure.",
+    "image": "/images/projects/beampay.png",
+    "link": "https://beampay.io"
   },
   {
     "id": "2",
-    "date": "2025-11-25",
-    "title": "Building in public",
-    "description": "Started rebuilding my personal site. Keeping it simple, focusing on design first.",
-    "image": "/images/placeholder-2.jpg",
-    "link": "https://github.com/dharmikumbhani/dharmi.xyz"
+    "date": "2025-11-27",
+    "title": "PayTo Spec",
+    "description": "PayTo gives every website a standard, origin-scoped place to publish how to get paid. Tools and wallets fetch one JSON file, show safe payment options, and (if signed) enable trusted autofill—no scraping, no copy-paste, fewer mistakes.",
+    "image": "/images/projects/payto-spec.png",
+    "link": "https://github.com/dharmikumbhani/payto-spec"
   },
   {
     "id": "3",
-    "date": "2025-11-24",
-    "image": "/images/placeholder-3.jpg"
+    "date": "2025-01-09",
+    "title": "What If #1",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-01.gif",
+    "link": "https://twitter.com/dharmikumbhani"
   },
   {
     "id": "4",
-    "date": "2025-11-23",
-    "image": "/images/placeholder-4.jpg"
+    "date": "2025-01-09",
+    "title": "What If: Fumbled Amount on Phantom",
+    "description": "Phantom starts showing how much you fumbled by selling too early.",
+    "image": "/images/projects/whatIfs/fumbledAmountonPhantom.jpg",
+    "link": "https://x.com/DharmiKumbhani/status/1877423748673843575?s=20"
   },
   {
     "id": "5",
-    "date": "2025-11-22",
-    "title": "On music and creativity",
-    "description": "Sci-fi soundtracks fuel my work",
-    "image": "/images/placeholder-5.jpg"
+    "date": "2025-01-08",
+    "title": "What If #2",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-02.gif",
+    "link": "https://twitter.com/dharmikumbhani"
   },
   {
     "id": "6",
-    "date": "2025-11-21",
-    "image": "/images/placeholder-6.jpg"
+    "date": "2025-01-08",
+    "title": "What If: Market-Predicted Grants",
+    "description": "Allocate OP grants based on market predictions of a project's ability to achieve key success metrics.",
+    "image": "/images/projects/whatIfs/allocateGrantsBasedOnMarketPrediction.jpg",
+    "link": "https://x.com/DharmiKumbhani/status/1877038811449888899?s=20"
+  },
+  {
+    "id": "7",
+    "date": "2025-01-07",
+    "title": "What If #3",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-03.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "8",
+    "date": "2025-01-07",
+    "title": "What If: M&A for Tokens",
+    "description": "Bring large token acquisition (>0.5% of total supply) deals on-chain with a system akin to Block Trades in TradFi.",
+    "image": "/images/projects/whatIfs/buyOutLargeTokenSupply.jpg",
+    "link": "https://x.com/DharmiKumbhani/status/1876672896883667435?s=20"
+  },
+  {
+    "id": "9",
+    "date": "2025-01-06",
+    "title": "What If #4",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-04.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "10",
+    "date": "2025-01-06",
+    "title": "What If: Funding Issues with $ai16z",
+    "description": "Concept for funding issues with $ai16z to accelerate development of /eliza. A multisig holds all funds and releases them to contributors upon closure of the issue.",
+    "image": "/images/projects/whatIfs/fundingIssuesWithTokens.jpg",
+    "link": "https://x.com/DharmiKumbhani/status/1876303060072595565?s=20"
+  },
+  {
+    "id": "11",
+    "date": "2025-01-05",
+    "title": "What If #5",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-05.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "12",
+    "date": "2025-01-04",
+    "title": "What If #6",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-06.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "13",
+    "date": "2025-01-03",
+    "title": "What If #7",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-07.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "14",
+    "date": "2025-01-02",
+    "title": "What If #8",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-08.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "15",
+    "date": "2025-01-01",
+    "title": "What If #9",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-09.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "16",
+    "date": "2024-12-31",
+    "title": "What If #10",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-10.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "17",
+    "date": "2024-12-30",
+    "title": "What If #11",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-11.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "18",
+    "date": "2024-12-29",
+    "title": "What If #12",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-12.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "19",
+    "date": "2024-12-28",
+    "title": "What If #13",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-13.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "20",
+    "date": "2024-12-27",
+    "title": "What If #14",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-14.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "21",
+    "date": "2024-12-26",
+    "title": "What If #15",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-15.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "22",
+    "date": "2024-12-25",
+    "title": "What If #16",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-16.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "23",
+    "date": "2024-12-24",
+    "title": "What If #17",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-17.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "24",
+    "date": "2024-12-23",
+    "title": "What If #18",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-18.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "25",
+    "date": "2024-12-22",
+    "title": "What If #19",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-19.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "26",
+    "date": "2024-12-21",
+    "title": "What If #20",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-20.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "27",
+    "date": "2024-12-20",
+    "title": "What If #21",
+    "description": "Daily design exploration",
+    "image": "/images/art/design-everyday-21.gif",
+    "link": "https://twitter.com/dharmikumbhani"
+  },
+  {
+    "id": "28",
+    "date": "2024-06-01",
+    "title": "Feedhook",
+    "description": "Designing and Building an opensource npm package that anywebsite can use to embed widgets and start taking feedback/npm score for their website, via attestation services.",
+    "image": "/images/projects/feedhook.png",
+    "link": "https://github.com/dharmikumbhani/feedhook"
+  },
+  {
+    "id": "29",
+    "date": "2024-05-01",
+    "title": "BuildersTribe",
+    "description": "Freelance design work for BuildersTribe, a community platform for Web3 builders. Developed comprehensive design systems, crafted UI/UX for core features, and managed project delivery across multiple product initiatives.",
+    "image": "/images/projects/buidlerstribe.png",
+    "link": "https://buidlers-tribe-website-git-main-dharmi.vercel.app/"
+  },
+  {
+    "id": "30",
+    "date": "2024-05-01",
+    "title": "Belief DAO",
+    "description": "Design contributions for Belief DAO, focusing on building cohesive design systems and intuitive user experiences for the decentralized community. Led UI/UX design and managed cross-functional design projects.",
+    "image": "/images/projects/beliefdao.webp"
+  },
+  {
+    "id": "31",
+    "date": "2024-02-01",
+    "title": "Buidl.so",
+    "description": "Buidl.so is a marketplace where startup founders earn rewards—credits, grants, introductions—as they transparently share progress, connecting them with mentors, contributors and investors who help at any stage. My work there spanned product and visual design, talent recruitment, frontend development and my favourite chief intercom support executive.",
+    "image": "/images/projects/buidlso.webp",
+    "link": "https://buidl.so"
+  },
+  {
+    "id": "32",
+    "date": "2023-09-01",
+    "title": "Mixrite Mixing Systems",
+    "description": "Complete redesign and redevelopment of a decade-old industrial website. Features 3D scrollable product visualizations and animated SVGs to make complex mixing systems easy to understand. Modernized the entire experience from design to interactive mechanics.",
+    "image": "/images/projects/mixrite.gif",
+    "link": "https://mixrite-website.vercel.app"
+  },
+  {
+    "id": "33",
+    "date": "2023-06-01",
+    "title": "Widgets – iOS (Scriptable)",
+    "description": "Scriptable is an app that lets you add cool, lightweight widgets as well as automation to your apple devices.",
+    "image": "/images/projects/scriptable.png",
+    "link": "https://github.com/dharmikumbhani/scriptable"
+  },
+  {
+    "id": "34",
+    "date": "2022-02-01",
+    "title": "Design Thinking Portfolio - BSSA College",
+    "description": "Portfolio from a design‑thinking elective documenting activities and sketchbook explorations.",
+    "image": "/images/projects/design-thinking.png",
+    "link": "/images/misc/F019_Dharmi Kumbhani_Design Thinking-Sketchbook.pdf"
+  },
+  {
+    "id": "35",
+    "date": "2021-12-01",
+    "title": "Apple M1 Chip Animation",
+    "description": "Recreation of the Apple M1 chip animation using SVG animations.",
+    "image": "/images/projects/apple-m1.mov",
+    "link": "https://codepen.io/DharmiKumbhani/full/BaWjzdE"
+  },
+  {
+    "id": "36",
+    "date": "2021-12-01",
+    "title": "MonkE - Animation",
+    "description": "Exploration",
+    "image": "/images/projects/monke.mov",
+    "link": "https://codepen.io/DharmiKumbhani/pen/mdWmmeq"
+  },
+  {
+    "id": "37",
+    "date": "2021-12-01",
+    "title": "Be Here Now - Animation",
+    "description": "Exploration",
+    "image": "/images/projects/beherenow.mov",
+    "link": "https://codepen.io/DharmiKumbhani/full/LYWjMbg"
+  },
+  {
+    "id": "38",
+    "date": "2021-11-01",
+    "title": "Sattva Logo Animation",
+    "description": "Motion graphics work featuring an animated logo design for Sattva.",
+    "image": "/images/projects/SattvaLogoAnimation.mp4"
+  },
+  {
+    "id": "39",
+    "date": "2021-03-01",
+    "title": "Quiz Facilitator",
+    "description": "Node script that extracts all questions and answer options from Google or Microsoft Forms. A technical exploration of form data access—useful for study preparation or understanding form structures. Works with publicly accessible forms only.",
+    "link": "https://github.com/dharmikumbhani/quiz-facilitator"
+  },
+  {
+    "id": "40",
+    "date": "2021-01-01",
+    "title": "Threads",
+    "description": "Twitter thread compiler and saver that transforms threads into long-form essays. Features offline reading, bookmark categorization, and more. Built a community of 3,500 users, particularly popular among finance professionals sharing company financials.",
+    "image": "/images/projects/threads.mov",
+    "link": "https://threads-web.vercel.app/about-us"
   }
 ]
