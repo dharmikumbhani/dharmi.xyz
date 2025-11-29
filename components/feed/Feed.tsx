@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { getAllFeedItems, formatDate, type FeedItem } from '@/lib/feed'
+import { Gallery } from './Gallery'
 
 function FeedItem({ item }: { item: FeedItem }) {
   const [isSquare, setIsSquare] = useState(false)
@@ -23,7 +24,15 @@ function FeedItem({ item }: { item: FeedItem }) {
         {formatDate(item.date)}
       </time>
 
-      {item.image && (
+      {/* Gallery view for multiple items */}
+      {item.gallery && item.gallery.length > 0 && (
+        <div className={hasText ? 'mb-4' : ''}>
+          <Gallery items={item.gallery} showTitles={false} />
+        </div>
+      )}
+
+      {/* Single image/video view */}
+      {!item.gallery && item.image && (
         <div className={`w-full ${isSquare ? 'max-w-[500px] mx-auto' : ''} bg-border overflow-hidden rounded-lg ${hasText ? 'mb-4' : ''}`}>
           {item.image.endsWith('.mov') || item.image.endsWith('.mp4') ? (
             <video

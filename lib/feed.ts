@@ -1,5 +1,11 @@
 import feedData from '@/data/feed.json'
 
+export interface GalleryItem {
+  image?: string
+  title?: string
+  link?: string
+}
+
 export interface FeedItem {
   id: string
   date: string
@@ -7,6 +13,7 @@ export interface FeedItem {
   description?: string
   image?: string
   link?: string
+  gallery?: GalleryItem[]
 }
 
 export interface NavItem {

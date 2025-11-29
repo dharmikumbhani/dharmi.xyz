@@ -8,7 +8,7 @@
   --color-text: #000000;
   --color-text-muted: #888888;
   --color-border: #f0f0f0;
-  --color-accent: #0066ff;
+  --color-accent: #ff7600;
   --color-hover: rgba(0, 0, 0, 0.05);
   --color-active: rgba(0, 0, 0, 0.1);
 
@@ -17,8 +17,8 @@
   --content-max-width: 800px;
 
   /* Carousel */
-  --carousel-height: 260px;
-  --carousel-radius: 140px;
+  --carousel-height: 200px;
+  --carousel-radius: 200px;
   --carousel-rotation: 10deg;
 
   /* Typography */
@@ -50,7 +50,7 @@
     --color-text: #ffffff;
     --color-text-muted: #8e8e93;
     --color-border: #1c1c1e;
-    --color-accent: #0a84ff;
+    --color-accent: #ff9500;
     --color-hover: rgba(255, 255, 255, 0.06);
     --color-active: rgba(255, 255, 255, 0.12);
   }

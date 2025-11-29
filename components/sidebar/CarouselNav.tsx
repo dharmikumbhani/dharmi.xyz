@@ -3,15 +3,14 @@
 import { useEffect, useState } from 'react'
 import { getFeedNavItems } from '@/lib/feed'
 
-const CONFIG = {
-  rotationPerItem: 10,      // degrees - cleaner 10° increments
-  cylinderRadius: 140,      // px - more breathing room
-} as const
-
 export function CarouselNav() {
   const [activeIndex, setActiveIndex] = useState(0)
   const navItems = getFeedNavItems()
   const totalItems = navItems.length
+
+  // Dynamic configuration based on item count
+  const rotationPerItem = 360 / totalItems  // Always a perfect circle
+  const cylinderRadius = Math.max(75, Math.min(90, 45 + totalItems * 2.2))  // Scales with items, capped 75-90px for ~7-8 items visible
 
   // Sync carousel with page scroll - immediate updates with RAF
   useEffect(() => {
@@ -83,7 +82,7 @@ export function CarouselNav() {
     handleClick(randomIndex)
   }
 
-  const rotation = activeIndex * CONFIG.rotationPerItem
+  const rotation = activeIndex * rotationPerItem
 
   return (
     <div className="space-y-2">
@@ -152,11 +151,13 @@ export function CarouselNav() {
           }}
         >
           {navItems.map((item, index) => {
-            const offsetFromActive = Math.abs(index - activeIndex)
+            // Calculate circular distance (accounts for wrap-around)
+            const linearDistance = Math.abs(index - activeIndex)
+            const offsetFromActive = Math.min(linearDistance, totalItems - linearDistance)
             const isActive = index === activeIndex
 
-            // Refined scaling: subtle 1.08x for active
-            const scale = isActive ? 1.08 : Math.max(0.92, 1 - (offsetFromActive * 0.05))
+            // Refined scaling: 1.12x for active to stand out more
+            const scale = isActive ? 1.12 : Math.max(0.92, 1 - (offsetFromActive * 0.05))
             // Gentler opacity fade
             const opacity = isActive ? 1 : Math.max(0.25, 1 - offsetFromActive * 0.25)
 
@@ -164,16 +165,16 @@ export function CarouselNav() {
               <button
                 key={item.id}
                 onClick={() => handleClick(index)}
-                className="absolute left-1 px-3 py-2 text-xs rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+                className="absolute left-1 px-3 py-1 text-xs rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
                 style={{
                   transform: `
-                    rotateX(${-index * CONFIG.rotationPerItem}deg)
-                    translateZ(${CONFIG.cylinderRadius}px)
+                    translateY(-50%)
+                    rotateX(${-index * rotationPerItem}deg)
+                    translateZ(${cylinderRadius}px)
                     scale(${scale})
                   `,
                   opacity,
                   top: '50%',
-                  marginTop: -20,
                   backfaceVisibility: 'hidden',
                   pointerEvents: offsetFromActive <= 2 ? 'auto' : 'none',
                   transition: 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease-out',
