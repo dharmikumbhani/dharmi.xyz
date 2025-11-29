@@ -30,7 +30,7 @@ export function Gallery({ items, showTitles = false }: GalleryProps) {
 
           const content = (
             <div className="flex-none w-[450px] snap-start group">
-              <div className="relative bg-border rounded-lg overflow-hidden mb-2">
+              <div className="relative bg-border rounded-3xl lg:rounded-[32px] overflow-hidden mb-2">
                 <img
                   src={item.image}
                   alt={item.title || `Gallery item ${index + 1}`}

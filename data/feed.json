@@ -10,13 +10,20 @@
   {
     "id": "2",
     "date": "2025-11-27",
+    "title": "Beam Pay Candy Shop",
+    "description": "Placeholder description for Beam Pay Candy Shop",
+    "image": "/images/projects/beampay-candy-shop.mp4"
+  },
+  {
+    "id": "3",
+    "date": "2025-11-27",
     "title": "PayTo Spec",
     "description": "PayTo gives every website a standard, origin-scoped place to publish how to get paid. Tools and wallets fetch one JSON file, show safe payment options, and (if signed) enable trusted autofill—no scraping, no copy-paste, fewer mistakes.",
     "image": "/images/projects/payto-spec.png",
     "link": "https://github.com/dharmikumbhani/payto-spec"
   },
   {
-    "id": "3",
+    "id": "4",
     "date": "2025-01-09",
     "title": "What If Series",
     "description": "25 design explorations of ideas and concepts",
@@ -149,7 +156,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "date": "2024-06-01",
     "title": "Feedhook",
     "description": "Designing and Building an opensource npm package that anywebsite can use to embed widgets and start taking feedback/npm score for their website, via attestation services.",
@@ -157,7 +164,7 @@
     "link": "https://github.com/dharmikumbhani/feedhook"
   },
   {
-    "id": "5",
+    "id": "6",
     "date": "2024-05-01",
     "title": "BuildersTribe",
     "description": "Freelance design work for BuildersTribe, a community platform for Web3 builders. Developed comprehensive design systems, crafted UI/UX for core features, and managed project delivery across multiple product initiatives.",
@@ -165,14 +172,14 @@
     "link": "https://buidlers-tribe-website-git-main-dharmi.vercel.app/"
   },
   {
-    "id": "6",
+    "id": "7",
     "date": "2024-05-01",
     "title": "Belief DAO",
     "description": "Design contributions for Belief DAO, focusing on building cohesive design systems and intuitive user experiences for the decentralized community. Led UI/UX design and managed cross-functional design projects.",
     "image": "/images/projects/beliefdao.webp"
   },
   {
-    "id": "7",
+    "id": "8",
     "date": "2024-02-01",
     "title": "Buidl.so",
     "description": "Buidl.so is a marketplace where startup founders earn rewards—credits, grants, introductions—as they transparently share progress, connecting them with mentors, contributors and investors who help at any stage. My work there spanned product and visual design, talent recruitment, frontend development and my favourite chief intercom support executive.",
@@ -180,7 +187,7 @@
     "link": "https://buidl.so"
   },
   {
-    "id": "8",
+    "id": "9",
     "date": "2023-09-01",
     "title": "Mixrite Mixing Systems",
     "description": "Complete redesign and redevelopment of a decade-old industrial website. Features 3D scrollable product visualizations and animated SVGs to make complex mixing systems easy to understand. Modernized the entire experience from design to interactive mechanics.",
@@ -188,7 +195,7 @@
     "link": "https://mixrite-website.vercel.app"
   },
   {
-    "id": "9",
+    "id": "10",
     "date": "2023-06-01",
     "title": "Widgets – iOS (Scriptable)",
     "description": "Scriptable is an app that lets you add cool, lightweight widgets as well as automation to your apple devices.",
@@ -196,7 +203,7 @@
     "link": "https://github.com/dharmikumbhani/scriptable"
   },
   {
-    "id": "10",
+    "id": "11",
     "date": "2022-02-01",
     "title": "Design Thinking Portfolio - BSSA College",
     "description": "Portfolio from a design‑thinking elective documenting activities and sketchbook explorations.",
@@ -204,7 +211,7 @@
     "link": "/images/misc/F019_Dharmi Kumbhani_Design Thinking-Sketchbook.pdf"
   },
   {
-    "id": "11",
+    "id": "12",
     "date": "2021-12-01",
     "title": "Apple M1 Chip Animation",
     "description": "Recreation of the Apple M1 chip animation using SVG animations.",
@@ -212,7 +219,7 @@
     "link": "https://codepen.io/DharmiKumbhani/full/BaWjzdE"
   },
   {
-    "id": "12",
+    "id": "13",
     "date": "2021-12-01",
     "title": "MonkE - Animation",
     "description": "Exploration",
@@ -220,7 +227,7 @@
     "link": "https://codepen.io/DharmiKumbhani/pen/mdWmmeq"
   },
   {
-    "id": "13",
+    "id": "14",
     "date": "2021-12-01",
     "title": "Be Here Now - Animation",
     "description": "Exploration",
@@ -228,21 +235,21 @@
     "link": "https://codepen.io/DharmiKumbhani/full/LYWjMbg"
   },
   {
-    "id": "14",
+    "id": "15",
     "date": "2021-11-01",
     "title": "Sattva Logo Animation",
     "description": "Motion graphics work featuring an animated logo design for Sattva.",
     "image": "/images/projects/SattvaLogoAnimation.mp4"
   },
   {
-    "id": "15",
+    "id": "16",
     "date": "2021-03-01",
     "title": "Quiz Facilitator",
     "description": "Node script that extracts all questions and answer options from Google or Microsoft Forms. A technical exploration of form data access—useful for study preparation or understanding form structures. Works with publicly accessible forms only.",
     "link": "https://github.com/dharmikumbhani/quiz-facilitator"
   },
   {
-    "id": "16",
+    "id": "17",
     "date": "2021-01-01",
     "title": "Threads",
     "description": "Twitter thread compiler and saver that transforms threads into long-form essays. Features offline reading, bookmark categorization, and more. Built a community of 3,500 users, particularly popular among finance professionals sharing company financials.",

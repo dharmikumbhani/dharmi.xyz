@@ -33,7 +33,7 @@ function FeedItem({ item }: { item: FeedItem }) {
 
       {/* Single image/video view */}
       {!item.gallery && item.image && (
-        <div className={`w-full ${isSquare ? 'max-w-[500px] mx-auto' : ''} bg-border overflow-hidden rounded-lg ${hasText ? 'mb-4' : ''}`}>
+        <div className={`w-full ${isSquare ? 'max-w-[500px] mx-auto' : ''} bg-border overflow-hidden rounded-3xl lg:rounded-[32px] ${hasText ? 'mb-4' : ''}`}>
           {item.image.endsWith('.mov') || item.image.endsWith('.mp4') ? (
             <video
               src={item.image}
