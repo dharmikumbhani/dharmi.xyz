@@ -27,22 +27,12 @@
     "id": "4",
     "date": "2025-01-09",
     "title": "What If Series",
-    "description": "25 design explorations of ideas and concepts",
+    "description": "4 design explorations of ideas and concepts",
     "gallery": [
-      {
-        "image": "/images/art/design-everyday-01.gif",
-        "title": "What If #1",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
       {
         "image": "/images/projects/whatIfs/fumbledAmountonPhantom.jpg",
         "title": "What If: Fumbled Amount on Phantom",
         "link": "https://x.com/DharmiKumbhani/status/1877423748673843575?s=20"
-      },
-      {
-        "image": "/images/art/design-everyday-02.gif",
-        "title": "What If #2",
-        "link": "https://twitter.com/dharmikumbhani"
       },
       {
         "image": "/images/projects/whatIfs/allocateGrantsBasedOnMarketPrediction.jpg",
@@ -50,109 +40,14 @@
         "link": "https://x.com/DharmiKumbhani/status/1877038811449888899?s=20"
       },
       {
-        "image": "/images/art/design-everyday-03.gif",
-        "title": "What If #3",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
         "image": "/images/projects/whatIfs/buyOutLargeTokenSupply.jpg",
         "title": "What If: M&A for Tokens",
         "link": "https://x.com/DharmiKumbhani/status/1876672896883667435?s=20"
       },
       {
-        "image": "/images/art/design-everyday-04.gif",
-        "title": "What If #4",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
         "image": "/images/projects/whatIfs/fundingIssuesWithTokens.jpg",
         "title": "What If: Funding Issues with $ai16z",
         "link": "https://x.com/DharmiKumbhani/status/1876303060072595565?s=20"
-      },
-      {
-        "image": "/images/art/design-everyday-05.gif",
-        "title": "What If #5",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-06.gif",
-        "title": "What If #6",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-07.gif",
-        "title": "What If #7",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-08.gif",
-        "title": "What If #8",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-09.gif",
-        "title": "What If #9",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-10.gif",
-        "title": "What If #10",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-11.gif",
-        "title": "What If #11",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-12.gif",
-        "title": "What If #12",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-13.gif",
-        "title": "What If #13",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-14.gif",
-        "title": "What If #14",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-15.gif",
-        "title": "What If #15",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-16.gif",
-        "title": "What If #16",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-17.gif",
-        "title": "What If #17",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-18.gif",
-        "title": "What If #18",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-19.gif",
-        "title": "What If #19",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-20.gif",
-        "title": "What If #20",
-        "link": "https://twitter.com/dharmikumbhani"
-      },
-      {
-        "image": "/images/art/design-everyday-21.gif",
-        "title": "What If #21",
-        "link": "https://twitter.com/dharmikumbhani"
       }
     ]
   },

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import type { GalleryItem } from '@/lib/feed'
 
 interface GalleryProps {
@@ -9,12 +8,6 @@ interface GalleryProps {
 }
 
 export function Gallery({ items, showTitles = false }: GalleryProps) {
-  const [loadedImages, setLoadedImages] = useState<{ [key: number]: boolean }>({})
-
-  const handleImageLoad = (index: number) => {
-    setLoadedImages(prev => ({ ...prev, [index]: true }))
-  }
-
   return (
     <div className="relative -mx-4 px-4">
       <div
@@ -29,17 +22,12 @@ export function Gallery({ items, showTitles = false }: GalleryProps) {
           if (!item.image) return null
 
           const content = (
-            <div className="flex-none w-[450px] snap-start group">
-              <div className="relative bg-border rounded-3xl lg:rounded-[32px] overflow-hidden mb-2">
+            <div className="snap-start group">
+              <div className="relative bg-border rounded-3xl lg:rounded-[32px] overflow-hidden mb-2" style={{ height: '400px' }}>
                 <img
                   src={item.image}
                   alt={item.title || `Gallery item ${index + 1}`}
-                  onLoad={() => handleImageLoad(index)}
-                  className="w-full h-auto transition-all duration-500 ease-out group-hover:scale-[1.02]"
-                  style={{
-                    opacity: loadedImages[index] ? 1 : 0,
-                    transition: 'opacity 0.3s ease-in-out'
-                  }}
+                  className="block h-full w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.02]"
                 />
               </div>
 
@@ -59,14 +47,14 @@ export function Gallery({ items, showTitles = false }: GalleryProps) {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="block flex-shrink-0"
               >
                 {content}
               </a>
             )
           }
 
-          return <div key={index}>{content}</div>
+          return <div key={index} className="flex-shrink-0">{content}</div>
         })}
       </div>
 
