@@ -10,8 +10,8 @@ function FeedItem({ item }: { item: FeedItem }) {
 
   const handleMediaLoad = (e: React.SyntheticEvent<HTMLImageElement | HTMLVideoElement>) => {
     const target = e.currentTarget
-    const aspectRatio = target.naturalWidth ?
-      target.naturalWidth / (target as HTMLImageElement).naturalHeight :
+    const aspectRatio = 'naturalWidth' in target ?
+      target.naturalWidth / target.naturalHeight :
       target.videoWidth / target.videoHeight
 
     // Consider square if aspect ratio is between 0.85 and 1.15 (roughly 1:1)
