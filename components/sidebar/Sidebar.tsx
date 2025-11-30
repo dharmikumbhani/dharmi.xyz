@@ -1,4 +1,5 @@
 import { CarouselNav } from './CarouselNav'
+import { Stickers } from './Stickers'
 import { getProfile } from '@/lib/profile'
 
 export function Sidebar() {
@@ -30,6 +31,9 @@ export function Sidebar() {
         <div className="hidden lg:block">
           <CarouselNav />
         </div>
+
+        {/* Stickers/Patches - Desktop only */}
+        <Stickers stickers={profile.stickers} />
       </div>
 
       {/* Social Links */}

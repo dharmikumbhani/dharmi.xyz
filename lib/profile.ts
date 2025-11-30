@@ -5,11 +5,19 @@ export interface SocialLink {
   url: string
 }
 
+export interface Sticker {
+  image: string
+  alt: string
+  url?: string
+  tooltip?: string
+}
+
 export interface Profile {
   name: string
   image: string
   bio: string[]
   links: SocialLink[]
+  stickers: Sticker[]
 }
 
 export function getProfile(): Profile {

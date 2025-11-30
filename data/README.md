@@ -35,6 +35,32 @@ Your personal information displayed in the sidebar.
 - Email links: `mailto:your@email.com`
 - Add/remove links as needed
 
+### Stickers/Patches
+
+Add stickers below the carousel navigation (desktop only):
+
+```json
+"stickers": [
+  {
+    "image": "/images/stickers/example.png",
+    "alt": "Description",
+    "url": "https://example.com",
+    "tooltip": "Hover text"
+  }
+]
+```
+
+**Fields:**
+- `image`: Path to sticker image (place in `/public/images/stickers/`)
+- `alt`: Alt text for accessibility
+- `url`: (Optional) Link when clicked
+- `tooltip`: (Optional) Text shown on hover
+
+**Tips:**
+- Use PNG images with transparent backgrounds
+- Recommended size: 96x96px or similar
+- Stickers have hover effects (scale + rotate)
+
 ---
 
 ## `feed.json`
@@ -95,6 +121,7 @@ Your projects, work, and updates displayed in the main feed.
 public/images/
 ├── profile/          # Your profile photos
 ├── projects/         # Project screenshots, demos
+├── stickers/         # Stickers/patches for sidebar
 ├── art/              # Creative work, experiments
 └── misc/             # Everything else
 ```
