@@ -4,6 +4,8 @@ A minimal, content-driven portfolio website built with Next.js 15. Features a un
 
 **Live Demo:** [dharmi.xyz](https://dharmi.xyz)
 
+https://github.com/user-attachments/assets/portfolio-template.mp4
+
 ---
 
 ## Features
