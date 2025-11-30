@@ -1,12 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { getAllFeedItems, formatDate, type FeedItem } from '@/lib/feed'
 import { Gallery } from './Gallery'
 
 function FeedItem({ item }: { item: FeedItem }) {
   const [isSquare, setIsSquare] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const hasText = item.title || item.description
+
+  // Force autoplay on iOS Safari
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Ignore autoplay errors (e.g., if user hasn't interacted with page yet)
+      })
+    }
+  }, [])
 
   const handleMediaLoad = (e: React.SyntheticEvent<HTMLImageElement | HTMLVideoElement>) => {
     const target = e.currentTarget
@@ -36,13 +46,14 @@ function FeedItem({ item }: { item: FeedItem }) {
         <div className={`w-full ${isSquare ? 'max-w-[500px] mx-auto' : ''} bg-border overflow-hidden rounded-3xl lg:rounded-[32px] ${hasText ? 'mb-4' : ''}`}>
           {item.image.endsWith('.mov') || item.image.endsWith('.mp4') ? (
             <video
+              ref={videoRef}
               src={item.image}
               autoPlay
               loop
               muted
               playsInline
               onLoadedMetadata={handleMediaLoad}
-              className="w-full h-auto transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+              className={`w-full h-auto transition-transform duration-500 ease-out group-hover:scale-[1.015] ${item.link ? 'pointer-events-none' : ''}`}
             />
           ) : (
             <img

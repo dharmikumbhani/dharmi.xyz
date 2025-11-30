@@ -23,7 +23,7 @@ export function Gallery({ items, showTitles = false }: GalleryProps) {
 
           const content = (
             <div className="snap-start group">
-              <div className="relative bg-border rounded-3xl lg:rounded-[32px] overflow-hidden mb-2" style={{ height: '400px' }}>
+              <div className="relative bg-border rounded-3xl lg:rounded-[32px] overflow-hidden mb-2 h-[300px] lg:h-[400px] max-w-[85vw] lg:max-w-none">
                 <img
                   src={item.image}
                   alt={item.title || `Gallery item ${index + 1}`}
