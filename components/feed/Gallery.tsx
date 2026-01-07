@@ -5,9 +5,10 @@ import type { GalleryItem } from '@/lib/feed'
 interface GalleryProps {
   items: GalleryItem[]
   showTitles?: boolean // Easy toggle for future
+  disableItemLinks?: boolean // Prevent nested anchor tags when Gallery is inside a link
 }
 
-export function Gallery({ items, showTitles = false }: GalleryProps) {
+export function Gallery({ items, showTitles = false, disableItemLinks = false }: GalleryProps) {
   return (
     <div className="relative -mx-4 px-4">
       <div
@@ -40,7 +41,7 @@ export function Gallery({ items, showTitles = false }: GalleryProps) {
             </div>
           )
 
-          if (item.link) {
+          if (item.link && !disableItemLinks) {
             return (
               <a
                 key={index}

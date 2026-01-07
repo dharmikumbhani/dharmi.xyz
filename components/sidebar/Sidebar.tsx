@@ -33,7 +33,7 @@ export function Sidebar() {
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-4 text-[11px] text-text-muted flex-wrap lg:flex-nowrap mt-4 lg:mt-0">
+      <div className="flex gap-4 text-[12px] text-text-muted flex-wrap lg:flex-nowrap mt-4 lg:mt-0">
         {profile.links.map((link) => (
           <a
             key={link.label}

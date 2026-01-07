@@ -86,6 +86,9 @@ export function CarouselNav() {
 
   return (
     <div className="space-y-2">
+      {/* Thin separator above carousel */}
+      <div className="h-px bg-border opacity-30" />
+
       {/* Header with title, shuffle button, and counter */}
       <div className="flex items-center justify-between px-1">
         <div className="flex items-center gap-2.5">
@@ -105,18 +108,37 @@ export function CarouselNav() {
             style={{ color: 'var(--color-text-muted)' }}
           >
             <svg
-              className="w-3 h-3"
+              className="w-3.5 h-3.5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              strokeWidth={2}
+              strokeWidth={1.5}
             >
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="8.5" cy="8.5" r="1" fill="currentColor"/>
-              <circle cx="15.5" cy="8.5" r="1" fill="currentColor"/>
-              <circle cx="12" cy="12" r="1" fill="currentColor"/>
-              <circle cx="8.5" cy="15.5" r="1" fill="currentColor"/>
-              <circle cx="15.5" cy="15.5" r="1" fill="currentColor"/>
+              {/* 3D Dice - Front face (showing 1 dot) */}
+              <path
+                d="M12 2 L22 7 L22 17 L12 22 L2 17 L2 7 Z"
+                fill="none"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+              {/* Top face */}
+              <path d="M12 2 L22 7 L12 12 L2 7 Z" fill="currentColor" fillOpacity="0.15" strokeLinejoin="round" />
+              {/* Right face */}
+              <path d="M12 12 L12 22 L22 17 L22 7 Z" fill="currentColor" fillOpacity="0.08" strokeLinejoin="round" />
+              {/* Left face */}
+              <path d="M2 7 L2 17 L12 22 L12 12 Z" fill="currentColor" fillOpacity="0.12" strokeLinejoin="round" />
+
+              {/* Dots on top face (showing 3) */}
+              <circle cx="7.5" cy="7.5" r="0.8" fill="currentColor" />
+              <circle cx="12" cy="7.5" r="0.8" fill="currentColor" />
+              <circle cx="16.5" cy="7.5" r="0.8" fill="currentColor" />
+
+              {/* Dots on right face (showing 5) */}
+              <circle cx="17" cy="10.5" r="0.7" fill="currentColor" />
+              <circle cx="20" cy="10.5" r="0.7" fill="currentColor" />
+              <circle cx="18.5" cy="12.5" r="0.7" fill="currentColor" />
+              <circle cx="17" cy="14.5" r="0.7" fill="currentColor" />
+              <circle cx="20" cy="14.5" r="0.7" fill="currentColor" />
             </svg>
           </button>
         </div>

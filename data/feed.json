@@ -27,7 +27,7 @@
     "id": "4",
     "date": "2025-01-09",
     "title": "What If Series",
-    "description": "4 design explorations of ideas and concepts",
+    "description": "13 design explorations of ideas and concepts",
     "link": "https://x.com/search?q=from%3ADharmiKumbhani%20what%20if&src=typed_query&f=top",
     "gallery": [
       {
@@ -49,6 +49,42 @@
         "image": "/images/projects/whatIfs/fundingIssuesWithTokens.jpg",
         "title": "What If: Funding Issues with $ai16z",
         "link": "https://x.com/DharmiKumbhani/status/1876303060072595565?s=20"
+      },
+      {
+        "image": "/images/projects/whatIfs/Phantom Agents as financial advisors for your app.png",
+        "title": "What If: Phantom Agents as Financial Advisors"
+      },
+      {
+        "image": "/images/projects/whatIfs/Agent Store.png",
+        "title": "What If: Agent Store"
+      },
+      {
+        "image": "/images/projects/whatIfs/Sweep - batch all sub 10$ tokens into USDC.png",
+        "title": "What If: Sweep - Batch Small Tokens into USDC"
+      },
+      {
+        "image": "/images/projects/whatIfs/Dexscreener Search.png",
+        "title": "What If: Dexscreener Search"
+      },
+      {
+        "image": "/images/projects/whatIfs/Airdrops were geospatial.png",
+        "title": "What If: Airdrops Were Geospatial"
+      },
+      {
+        "image": "/images/projects/whatIfs/Imessage Send money.png",
+        "title": "What If: iMessage Send Money"
+      },
+      {
+        "image": "/images/projects/whatIfs/invites.fun.png",
+        "title": "What If: invites.fun"
+      },
+      {
+        "image": "/images/projects/whatIfs/Twitch Lets Creators Tokenize their cream.png",
+        "title": "What If: Twitch Lets Creators Tokenize"
+      },
+      {
+        "image": "/images/projects/whatIfs/no mans left behind.png",
+        "title": "What If: No Mans Left Behind"
       }
     ]
   },

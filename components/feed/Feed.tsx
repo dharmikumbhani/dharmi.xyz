@@ -37,7 +37,7 @@ function FeedItem({ item }: { item: FeedItem }) {
       {/* Gallery view for multiple items */}
       {item.gallery && item.gallery.length > 0 && (
         <div className={hasText ? 'mb-4' : ''}>
-          <Gallery items={item.gallery} showTitles={false} />
+          <Gallery items={item.gallery} showTitles={false} disableItemLinks={!!item.link} />
         </div>
       )}
 
